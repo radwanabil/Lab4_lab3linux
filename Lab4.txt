@@ -1,0 +1,21 @@
+Lab4
+-------------------------------------------------------------
+1-tar -tf compressedFile.tar
+2-sudo tar -jcvpf system-back.tbz2 /home/linuxtechi /etc /opt 
+3-ls -li /
+  ls -li /etc
+  ls -li /etc/hosts
+4-sudo cp /etc/passwd /home
+  cmp /etc/passwd /home/passwd
+  diff /etc/passwd /home/passwd
+  sudo nano /home/passwd
+when i edited the copies file then used
+  cmp /etc/passwd /home/passwd
+the ouptput is cmp: EOF on /etc/passwd after byte 2788, line 47 which means that the files are no longer similar
+and when i used
+   diff /etc/passwd /home/passwd
+the ouptput is: 48d47
+                < hi there 
+5-ln -s /etc/passwd /boot
+6-ln /etc/passwd /boot
+it failed to create hard link because file exists
